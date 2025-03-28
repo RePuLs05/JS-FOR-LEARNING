@@ -1,5 +1,6 @@
 .floating-label {
   position: relative;
+  padding-top: 20px;
 }
 .floating-label label {
   position: absolute;
