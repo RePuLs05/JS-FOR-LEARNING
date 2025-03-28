@@ -4,70 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS FORM</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./styles.css">
 </head>
-<body class="bg-gray-50 flex items-center justify-center min-h-screen">
-    <div class="bg-white shadow-lg rounded-2xl p-8 w-full max-w-lg border border-gray-200">
-        <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">Student Profile</h2>
-        <form id="studentForm" class="space-y-6">
-            <div class="floating-label">
-                <input type="text" name="fullName" placeholder=" " class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400" required>
+<body>
+    <section class="container">
+        <h2>Student Profile</h2>
+        <form id="studentForm">
+            <section class="floating-label">
+                <input type="text" name="fullName" placeholder=" " required>
                 <label>Full name *</label>
-            </div>
-            <div class="floating-label">
-                <input type="email" name="email" placeholder=" " class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400" required>
+            </section>
+            <section class="floating-label">
+                <input type="email" name="email" placeholder=" " required>
                 <label>Email *</label>
-            </div>
-            <select name="country" class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400" required>
-                <option value="">Country</option>
-                <option value="ge">Georgia</option>
-                <option value="ua">Ukraine</option>
-            </select>
-            <div class="floating-label">
-                <input type="number" id="phone" name="phone" placeholder=" " class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400" required>
+            </section>
+            <section>
+                <select name="country" required>
+                    <option value="">Country</option>
+                    <option value="ge">Georgia</option>
+                    <option value="us">USA</option>
+                </select>
+            </section>
+            <section class="floating-label">
+                <input type="number" id="phone" name="phone" placeholder=" " required>
                 <label>Phone *</label>
-            </div>
-            <div class="floating-label">
-                <input type="text" name="universityYears" placeholder=" " class="w-full border rounded-lg px-3 py-2">
+            </section>
+            <section class="floating-label">
+                <input type="text" name="universityYears" placeholder=" ">
                 <label>Finished university years</label>
-            </div>
-            <div>
-                <h3 class="font-semibold mb-2">Primary Technologies</h3>
-                <div id="techSection" class="space-y-2">
-                    <div class="flex space-x-2">
-                        <input type="text" name="technology0" placeholder="Technology *" class="flex-1 border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400" required>
-                        <input type="text" name="experience0" placeholder="Experience (years) *" class="flex-1 border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400" required>
-                    </div>
-                </div>
-                <button type="button" id="addTechBtn" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">Add</button>
-            </div>
-            <div class="floating-label">
-                <textarea name="nextYearPlans" placeholder=" " class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400" required></textarea>
+            </section>
+            <section>
+                <h3>Primary Technologies</h3>
+                <section id="techSection">
+                    <section class="tech-input">
+                        <input type="text" name="technology0" placeholder="Technology *" required>
+                        <input type="text" name="experience0" placeholder="Experience (years) *" required>
+                    </section>
+                </section>
+                <button type="button" id="addTechBtn">Add</button>
+            </section>
+            <section class="floating-label">
+                <textarea name="nextYearPlans" placeholder=" " required></textarea>
                 <label>Plans for the next year *</label>
-            </div>
-            <div>
-                <h3 class="font-semibold mb-2">Links</h3>
-                <div class="floating-label">
-                    <input type="url" name="githubProfile" placeholder=" " class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400" required>
+            </section>
+            <section>
+                <h3>Links</h3>
+                <section class="floating-label">
+                    <input type="url" name="githubProfile" placeholder=" " required>
                     <label>GitHub profile *</label>
-                </div>
-                <div class="floating-label">
-                    <input type="url" name="linkedinProfile" placeholder=" " class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400">
+                </section>
+                <section class="floating-label">
+                    <input type="url" name="linkedinProfile" placeholder=" ">
                     <label>LinkedIn profile</label>
-                </div>
-                <div class="floating-label">
-                    <input type="url" name="publicWebsite" placeholder=" " class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400">
+                </section>
+                <section class="floating-label">
+                    <input type="url" name="publicWebsite" placeholder=" ">
                     <label>Public website</label>
-                </div>
-                <div class="floating-label">
-                    <input type="url" name="cvLink" placeholder=" " class="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400">
+                </section>
+                <section class="floating-label">
+                    <input type="url" name="cvLink" placeholder=" ">
                     <label>Link to CV</label>
-                </div>
-            </div>
-            <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition font-semibold">Submit</button>
+                </section>
+            </section>
+            <button type="submit">Submit</button>
         </form>
-    </div>
+    </section>
     <script src="./script.js"></script>
 </body>
 </html>

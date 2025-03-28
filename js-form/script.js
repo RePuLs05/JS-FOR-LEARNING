@@ -12,13 +12,14 @@ document.addEventListener('DOMContentLoaded', function() {
   addTechBtn.addEventListener('click', function() {
       techCounter++;
       const techDiv = document.createElement('div');
-      techDiv.classList.add('flex', 'space-x-2', 'mb-2');
+      techDiv.classList.add('tech-input');
       techDiv.innerHTML = `
-          <input type="text" name="technology${techCounter}" placeholder="Technology *" class="flex-1 border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400" required>
-          <input type="text" name="experience${techCounter}" placeholder="Experience (years) *" class="flex-1 border rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-400" required>
-          <button type="button" class="remove-tech bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600">Remove</button>
+          <input type="text" name="technology${techCounter}" placeholder="Technology *" required>
+          <input type="text" name="experience${techCounter}" placeholder="Experience (years) *" required>
+          <button type="button" class="remove-tech">Remove</button>
       `;
       techSection.appendChild(techDiv);
+      
       techDiv.querySelector('.remove-tech').addEventListener('click', function() {
           techSection.removeChild(techDiv);
       });
